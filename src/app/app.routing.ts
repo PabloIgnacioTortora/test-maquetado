@@ -4,7 +4,8 @@ import { EShopComponent } from './components/e-shop/e-shop.component';
 
 const appRoutes: Routes = [
   { path: '', component: EShopComponent },
-  { path: 'eshop', component: EShopComponent },
+  { path: 'e-shop', component: EShopComponent },
+  { path: '**', component: EShopComponent },
 ];
 
 export const appRoutingProviders: any[] = [];

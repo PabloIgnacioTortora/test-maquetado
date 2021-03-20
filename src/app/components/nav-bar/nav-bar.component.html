@@ -1,4 +1,4 @@
-<div class="header" id='header'>
+<div class="header" id="header">
   <mat-toolbar class="navbar">
     <button
       mat-icon-button
@@ -27,7 +27,13 @@
     </button>
   </mat-toolbar>
   <div class="header__links">
-    <a class="links__buttons">sale</a>
+    <a
+      class="links__buttons"
+      [routerLinkActive]="['actived']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/sale']"
+      >sale</a
+    >
     <a
       class="links__buttons"
       [routerLinkActive]="['actived']"
@@ -35,9 +41,30 @@
       [routerLink]="['/eshop']"
       >e-shop</a
     >
-    <a class="links__buttons">lookbook</a>
-    <a class="links__buttons">campaña</a>
-    <a class="links__buttons">locales</a>
+    <a
+      class="links__buttons"
+      class="links__buttons"
+      [routerLinkActive]="['actived']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/lookbook']"
+      >lookbook</a
+    >
+    <a
+      class="links__buttons"
+      class="links__buttons"
+      [routerLinkActive]="['actived']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/campania']"
+      >campaña</a
+    >
+    <a
+      class="links__buttons"
+      class="links__buttons"
+      [routerLinkActive]="['actived']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/locales']"
+      >locales</a
+    >
   </div>
   <div id="menu-mobile">
     <app-side-bar></app-side-bar>
