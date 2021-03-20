@@ -1,0 +1,23 @@
+.container-flex {
+  display: flex;
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+  }
+  section {
+    width: 70%;
+    padding-left: 10px;
+  }
+
+  @media (min-width: 320px) and (max-width: 760px) {
+    nav {
+      display: none;
+    }
+    section {
+      width: 100%;
+      padding-left: 0px;
+      padding: 20px;
+    }
+  }
+}

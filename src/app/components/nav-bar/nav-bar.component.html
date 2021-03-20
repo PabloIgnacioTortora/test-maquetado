@@ -1,0 +1,45 @@
+<div class="header" id='header'>
+  <mat-toolbar class="navbar">
+    <button
+      mat-icon-button
+      class="navbar__menu-button"
+      (click)="showMenu()"
+      color="white"
+      aria-label="menu icon"
+    >
+      <mat-icon class="navbar__menu-icon">menu</mat-icon>
+    </button>
+    <span class="navbar__spacer"></span>
+    <img class="navbar__logo" src="../../../assets/logo.svg" alt="logo" />
+    <span class="navbar__spacer"></span>
+    <button
+      mat-icon-button
+      class="navbar__button-none"
+      aria-label="search icon"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button class="navbar__button-none" aria-label="user icon">
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-icon-button class="navbar__button" aria-label="shop icon">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div class="header__links">
+    <a class="links__buttons">sale</a>
+    <a
+      class="links__buttons"
+      [routerLinkActive]="['actived']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/eshop']"
+      >e-shop</a
+    >
+    <a class="links__buttons">lookbook</a>
+    <a class="links__buttons">campaña</a>
+    <a class="links__buttons">locales</a>
+  </div>
+  <div id="menu-mobile">
+    <app-side-bar></app-side-bar>
+  </div>
+</div>

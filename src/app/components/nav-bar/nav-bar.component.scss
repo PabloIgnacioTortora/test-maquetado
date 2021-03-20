@@ -1,0 +1,124 @@
+/* Colors: */
+$fondo-header: #100217e6;
+$texto-header: #fafafa;
+$gris-claro: #e4e8ee;
+$color-texto: #030b1c;
+$menu-color: #100217f5;
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: content;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 6px #00000026;
+  z-index: 1;
+  transition: 0.4s;
+
+  .navbar {
+    background: $fondo-header;
+    padding: 3px;
+    height: 50px;
+
+    .navbar__button {
+      color: $texto-header;
+    }
+
+    .navbar__spacer {
+      flex: 1 1 auto;
+    }
+  }
+
+  .links__buttons {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    color: $texto-header;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .links__buttons:hover,
+  .actived {
+    background-color: #10021767;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: 500ms;
+  }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    #menu-mobile {
+      position: absolute;
+      width: 200px;
+      padding-left: 30px;
+      background-color: $menu-color;
+      left: -230px;
+      border-bottom-right-radius: 15px;
+      z-index: 3;
+      transition: 0.5s;
+    }
+
+    #menu-mobile.active {
+      left: 0;
+    }
+
+    .navbar {
+      height: 64px;
+    }
+    .navbar__menu-button {
+      color: $texto-header;
+      margin-left: 3px;
+      width: 50px;
+      height: 50px;
+    }
+    .navbar__menu-icon {
+      width: 48px;
+      height: 25px;
+      font-size: 50px;
+    }
+    .navbar__logo {
+      width: 140px;
+    }
+    .navbar__button-none {
+      display: none;
+    }
+    .navbar__button mat-icon {
+      color: $texto-header;
+      font-size: 30px;
+    }
+    .header__links {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .navbar__menu-button {
+      display: none;
+    }
+    #menu-mobile {
+      display: none;
+    }
+    .navbar__logo {
+      position: absolute;
+      left: 40%;
+      width: 16%;
+    }
+    .navbar__button {
+      color: $texto-header;
+    }
+    .navbar__button-none {
+      color: $texto-header;
+    }
+    .header__links {
+      display: flex;
+      justify-content: center;
+      column-gap: 8%;
+      width: 100%;
+      height: 33px;
+      background-color: $fondo-header;
+    }
+  }
+}

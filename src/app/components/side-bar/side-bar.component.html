@@ -1,0 +1,19 @@
+<div class="sidebar" id="sidebar">
+  <h1>Zapatillas</h1>
+  <mat-divider></mat-divider>
+  <h2>Filtrar</h2>
+  <div class="filtros">
+    <h3>Categoria</h3>
+    <div *ngFor="let filter of filtros">
+      <p>{{ filter.categoria }}</p>
+    </div>
+    <h3>Talle</h3>
+    <div *ngFor="let filter of filtros">
+      <p>{{ filter.talle }}</p>
+    </div>
+    <h3>Color</h3>
+    <div *ngFor="let filter of filtros">
+      <p>{{ filter.color }}</p>
+    </div>
+  </div>
+</div>
