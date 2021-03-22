@@ -22,7 +22,7 @@ export class NavBarComponent implements OnInit {
   }
 
   showMenu() {
-    console.log('clik');
     document.getElementById('menu-mobile').classList.toggle('active');
+    document.getElementById('section').classList.toggle('active');
   }
 }

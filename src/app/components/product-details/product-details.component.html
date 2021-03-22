@@ -1,0 +1,33 @@
+<div class="detail-container">
+  <button
+    mat-icon-button
+    class="goback-button"
+    (click)="goBack()"
+  >
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <mat-card class="detail-container__card">
+    <img
+      mat-card-image
+      class="datail-container__card-image"
+      src="{{ productoId[0].image }}"
+      *ngIf="productoId[0].image"
+      alt="zapatilla_1"
+    />
+    <div class="info">
+      <span>Nuevo | 338 vendidos</span>
+      <h1>{{ productoId[0].name }}</h1>
+      <h2>{{ productoId[0].model }}</h2>
+      <p>$ {{ productoId[0].precio }}</p>
+      <span>en 12x $ 706</span>
+      <p class="mediodepago">Ver los medios de pago</p>
+      <p class="stockdisponible">Stock disponible</p>
+      <button class="btn-comprar" mat-raised-button color="primary">
+        Comprar ahora
+      </button>
+      <button class="btn-agregarcarrito" mat-raised-button color="primary">
+        Agregar al carrito
+      </button>
+    </div>
+  </mat-card>
+</div>

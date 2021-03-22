@@ -1,18 +1,33 @@
-.card {
-  border-radius: 0px;
-  box-shadow: none;
-}
-
 .products-grid {
   display: grid;
   margin-top: 55px;
   grid-gap: 10px;
   grid-row-gap: 20px;
+
+  .product-grid__card {
+    border-radius: 0px;
+    box-shadow: none;
+
+    p {
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 8px;
+      font-size: 19px;
+    }
+    span {
+      display: inline-block;
+    }
+    h4 {
+      margin-top: 0;
+      font-size: 19px;
+    }
+  }
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
   .products-grid {
     width: 100%;
+    margin-top: 0;
     grid-template-columns: repeat(1, 1fr);
   }
 }

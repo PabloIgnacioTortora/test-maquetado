@@ -1,9 +1,13 @@
 <div class="products-grid">
-  <mat-card class="card" *ngFor="let product of productos">
-    <img mat-card-image [src]="product.image" alt="zapatilla_1" />
-    <mat-divider></mat-divider>
-    <mat-card-content>
-      <p>$2113</p>
-    </mat-card-content>
+  <mat-card class="product-grid__card" *ngFor="let product of productos">
+    <a [routerLink]="['/product', product._id]">
+      <img mat-card-image [src]="product.image" alt="zapatilla_1" />
+    </a>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <p>{{product.name}}</p>
+        <span>{{product.model}}</span>
+        <h4>${{product.precio}}</h4>
+      </mat-card-content>
   </mat-card>
 </div>

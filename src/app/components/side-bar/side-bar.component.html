@@ -1,19 +1,74 @@
-<div class="sidebar" id="sidebar">
+<div class="sidebar">
+  <div class="sidebar__nav">
+    <a
+      class="sidebar__nav-buttons"
+      [routerLinkActive]="['actived']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/sale']"
+      >sale</a
+    >
+    <a
+      class="sidebar__nav-buttons"
+      [routerLinkActive]="['actived']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/eshop']"
+      >e-shop</a
+    >
+    <a
+      class="sidebar__nav-buttons"
+      [routerLinkActive]="['actived']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/lookbook']"
+      >lookbook</a
+    >
+    <a
+      class="sidebar__nav-buttons"
+      [routerLinkActive]="['actived']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/campania']"
+      >campaña</a
+    >
+    <a
+      class="sidebar__nav-buttons"
+      [routerLinkActive]="['actived']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/locales']"
+      >locales</a
+    >
+  </div>
   <h1>Zapatillas</h1>
   <mat-divider></mat-divider>
   <h2>Filtrar</h2>
   <div class="filtros">
-    <h3>Categoria</h3>
-    <div *ngFor="let filter of filtros">
-      <p>{{ filter.categoria }}</p>
+    <a (click)="showCategory()">
+      <h3>Categoria</h3>
+    </a>
+    <div id="categorys">
+      <div *ngFor="let filter of filtros">
+        <p>
+          {{ filter.categoria }}
+        </p>
+      </div>
     </div>
-    <h3>Talle</h3>
-    <div *ngFor="let filter of filtros">
-      <p>{{ filter.talle }}</p>
+    <a (click)="showTalle()">
+      <h3>Talle</h3>
+    </a>
+    <div id="talles">
+      <div *ngFor="let filter of filtros">
+        <p>
+          {{ filter.talle }}
+        </p>
+      </div>
     </div>
-    <h3>Color</h3>
-    <div *ngFor="let filter of filtros">
-      <p>{{ filter.color }}</p>
+    <a (click)="showColor()">
+      <h3>Color</h3>
+    </a>
+    <div id="colors">
+      <div *ngFor="let filter of filtros">
+        <p>
+          {{ filter.color }}
+        </p>
+      </div>
     </div>
   </div>
 </div>

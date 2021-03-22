@@ -16,6 +16,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { MatDividerModule } from '@angular/material/divider';
     ProductsGridComponent,
     SideBarComponent,
     EShopComponent,
+    FooterComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { style } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
 
 export interface Filtros {
   categoria: string;
@@ -40,4 +41,19 @@ export class SideBarComponent {
     },
   ];
   constructor() {}
+
+  showCategory() {
+    console.log('clik');
+    document.getElementById('categorys').classList.toggle('active');
+  }
+
+  showTalle() {
+    console.log('clik');
+    document.getElementById('talles').classList.toggle('active');
+  }
+
+  showColor() {
+    console.log('clik');
+    document.getElementById('colors').classList.toggle('active');
+  }
 }

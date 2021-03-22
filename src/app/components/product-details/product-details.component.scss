@@ -1,0 +1,99 @@
+.detail-container {
+  display: flex;
+  height: content;
+  padding: 50px;
+  justify-content: center;
+  margin-top: 50px;
+
+.goback-button{
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  color: #100217d8;
+}
+
+  .detail-container__card {
+    width: content;
+
+    .info {
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid rgba(204, 204, 204, 0.651);
+
+      h1 {
+        font-size: 50px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 30px;
+        margin-bottom: 0;
+      }
+      .mediodepago {
+        color: rgba(0, 0, 255, 0.514);
+        font-size: 20px;
+        margin-top: 0;
+      }
+      .stockdisponible {
+        margin-top: 50px;
+        font-size: 20px;
+      }
+      .btn-comprar {
+        width: 100%;
+        height: 55px;
+        margin-top: 30px;
+      }
+
+      .btn-agregarcarrito {
+        width: 100%;
+        height: 55px;
+        margin-top: 30px;
+        color: rgb(89, 105, 196);
+        background-color: rgb(175, 200, 255);
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .detail-container {
+    display: flex;
+    height: content;
+    padding: 50px;
+    justify-content: center;
+    margin-top: 50px;
+
+    .detail-container__card {
+      width: content;
+
+      .datail-container__card-image {
+        width: 100%;
+      }
+
+      .info {
+        width: inherit;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .detail-container {
+    display: flex;
+
+    .detail-container__card {
+      display: flex;
+      width: content;
+
+      .datail-container__card-image {
+        width: 70%;
+        height: inherit;
+      }
+
+      .info {
+        width: inherit;
+      }
+    }
+  }
+}

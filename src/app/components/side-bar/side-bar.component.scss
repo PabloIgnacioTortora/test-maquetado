@@ -1,14 +1,16 @@
 $texto-header: #fafafa;
 $background-h3: #e4e8ee;
+.sidebar {
+  .filtros {
+    margin-left: 15px;
 
-.filtros {
-  margin-left: 15px;
-  h3 {
-    padding: 4px;
-    background-color: $background-h3;
-  }
-  p {
-    margin-left: 10px;
+    h3 {
+      padding: 4px;
+      background-color: $background-h3;
+    }
+    p {
+      margin-left: 10px;
+    }
   }
 }
 
@@ -16,6 +18,31 @@ $background-h3: #e4e8ee;
   .sidebar {
     width: 100%;
     margin-top: 50px;
+
+    .sidebar__nav {
+      margin-right: 35px;
+
+      .sidebar__nav-buttons {
+        display: block;
+        padding: 10px;
+        margin: 10px;
+        color: #bb98c9;
+        list-style: none;
+        text-decoration: none;
+        text-align: center;
+      }
+      .sidebar__nav-buttons::first-letter {
+        text-transform: uppercase;
+      }
+
+      .sidebar__nav-buttons:hover,
+      .actived {
+        background-color: #10021796;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        transition: 500ms;
+      }
+    }
 
     h1 {
       margin-bottom: 5px;
@@ -27,6 +54,30 @@ $background-h3: #e4e8ee;
 
     .filtros {
       margin-left: 15px;
+
+      #categorys {
+        display: none;
+      }
+      #categorys.active {
+        display: block;
+      }
+
+      #talles {
+        display: none;
+      }
+
+      #talles.active {
+        display: block;
+      }
+
+      #colors {
+        display: none;
+      }
+
+      #colors.active {
+        display: block;
+      }
+
       h3 {
         padding: 4px;
         background-color: #270933;
@@ -43,10 +94,15 @@ $background-h3: #e4e8ee;
 @media (min-width: 768px) and (max-width: 916px) {
   .sidebar {
     width: 100%;
-    margin-right: 90px;
+    margin-right: 50px;
     margin-top: 50px;
     h1 {
       margin-bottom: 5px;
+      font-size: 30px;
+    }
+
+    .sidebar__nav {
+      display: none;
     }
   }
 }
@@ -54,10 +110,14 @@ $background-h3: #e4e8ee;
 @media (min-width: 916px) and (max-width: 1440px) {
   .sidebar {
     width: 100%;
-    margin-right: 140px;
+    margin-right: 120px;
     margin-top: 50px;
     h1 {
       margin-bottom: 5px;
+      font-size: 30px;
+    }
+    .sidebar__nav {
+      display: none;
     }
   }
 }

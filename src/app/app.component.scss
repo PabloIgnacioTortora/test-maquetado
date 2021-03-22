@@ -1,9 +1,15 @@
 .container {
   width: 100%;
   height: content;
-  background-color: #fdfbfb;
+  background-color: #faf8f8;
 
   section {
     padding-top: 80px;
+    transition: .5s;
+  }
+
+  section.active{
+    opacity: .6;
+    transition: .5s;
   }
 }

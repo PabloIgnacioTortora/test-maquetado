@@ -122,5 +122,12 @@
       }
     }
   },
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "styleext": "scss"
+      }
+    }
+  },
   "defaultProject": "test-maquetado"
 }
